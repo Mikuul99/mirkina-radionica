@@ -1,0 +1,118 @@
+.about-us {
+    background-color: #fff9f9;
+    padding: 100px 0;
+    margin: 20px 0;
+  }
+  
+  .about-us_container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .about-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+    padding-top: 3rem;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .about-window:hover {
+    box-shadow: 0 20px 0 0.3rem var(--lightviolet);
+    transform: translate(0, -10%);
+  }
+  
+  .about-window img {
+    filter: invert(18%) sepia(38%) saturate(6174%) hue-rotate(256deg) brightness(95%) contrast(80%);
+    width: 3rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 90px;
+    transition: all 0.5s ease;
+  }
+  
+  .about-window:hover img {
+    top: 20px;
+  }
+  
+  .about-window h1 {
+    transition: 0.5s ease;
+    position: absolute;
+    color: var(--rose);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .about-window:hover h1 {
+    opacity: 0;
+  }
+  
+  .about-window p {
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: var(--lightrose);
+  }
+  
+  .about-window:hover p {
+    opacity: 1;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about-us_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-window {
+      height: auto;
+      width: 70%;
+      margin: 0 auto;
+      flex-direction: column;
+      padding: 2rem;
+    }
+  
+    .about-window:hover {
+      box-shadow: none;
+      transform: none;
+    }
+  
+    .about-window img {
+      position: relative;
+      top: 0;
+      width: 2rem;
+    }
+  
+    .about-window:hover img {
+      top: 0;
+    }
+  
+    .about-window h1 {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin-bottom: 1rem;
+    }
+  
+    .about-window:hover h1 {
+      opacity: 1;
+    }
+  
+    .about-window p {
+      position: relative;
+      opacity: 1;
+    }
+  }

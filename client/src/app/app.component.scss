@@ -1,0 +1,148 @@
+$phone: 700px;
+$tablet: 900px;
+$desktop: 1200px;
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$phone}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem 3rem;
+  position: sticky;
+
+  &__logo {
+    font-family: "Logo1";
+    text-decoration: none;
+    font-size: 2.7rem;
+    color: var(--primary-200);
+    line-height: 80%;
+    text-align: left;
+    flex: 100%;
+
+    &--radionica {
+      font-family: "Logo2";
+      font-size: 0.8em;
+      color: #f8f8f8d5;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+  }
+  
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.2rem;
+    flex: 100%;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &--menu {
+      gap: .2rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  
+  p {
+    width: 100%;
+    margin: 0 auto;
+    font-size: .6rem;
+    color: var(--primary)
+  }
+}
+
+@include tablet {
+  .navbar {
+
+    &__logo {
+      font-size: 2rem;
+    }
+
+    &__menu {
+      gap: 1rem;
+    }
+
+    &__btn-icon {
+
+      &--store {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+
+    }
+  }
+}
+
+@include phone {
+  .navbar {
+
+    position: relative;
+    padding-inline: 1rem;
+    justify-content: space-evenly;
+
+    &__hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__menu {
+      position: absolute;
+      top: 7rem;
+      right: -5rem;
+      background-color: rgb(31, 31, 31);
+      border-radius: 1rem;
+      flex-direction: column;
+      width: 10%;
+      padding: 2rem 0;
+      transition: all .5s ease;
+    }
+
+    &__btn-container {
+
+      &--store {
+        background-color: rgb(31, 31, 31);
+      }
+    }
+
+    &__menu-active {
+      right: 0;
+    }
+
+    &__btn-small {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="flex justify-center align-center">
+    <div class="m-auto justify-center align-center">
+        <mat-card>
+
+            <mat-card-title>
+                <h1>Login</h1>
+            </mat-card-title>
+
+            <mat-card-subtitle>
+                Unesite svoj email i password kako biste se ulogovali.
+            </mat-card-subtitle>
+
+            <form [formGroup]="form">
+                <mat-card-content>
+                    <mat-form-field>
+                        <mat-label>Email</mat-label>
+                        <input matInput name="email" formControlName="email" type="email"
+                            placeholder="Unesite svoj email">
+                        </mat-form-field>
+                        <p *ngIf="f.email.errors && f.email.touched && f.email.dirty" class="text-red">Email nije validan</p>
+
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput name="password" formControlName="password" type="password" placeholder="Unesite svoj password">
+                    </mat-form-field>
+                    <p *ngIf="f.password.errors && f.password.touched && f.password.dirty" class="text-red">Password mora sadržati minimum 6 karaktera</p>
+                </mat-card-content>
+
+                <mat-divider></mat-divider>
+
+                <mat-card-actions>
+                    <button class="mat-spinner" (click)="onLogin()" type="submit" mat-raised-button color="accent"
+                        [disabled]="!form.valid">
+                        <mat-spinner class=".mat-spinner" *ngIf="isLoading" diameter="35" color="basic"></mat-spinner>
+                        <span *ngIf="!isLoading">Login</span>
+                    </button>
+                    <p *ngIf="loginResponse">{{loginResponse}}</p>
+                </mat-card-actions>
+            </form>
+        </mat-card>
+        <button mat-raised-button color="accent" (click)="isLoggedIn()">Check Exp</button>
+        <button mat-raised-button color="primary" (click)="onLogout()">Logout</button>
+    </div>
+</div>

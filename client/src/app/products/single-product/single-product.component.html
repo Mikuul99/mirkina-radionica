@@ -1,0 +1,24 @@
+<ng-container class="single-product" *ngIf="product">
+
+    <section class="single-product__header">
+        <app-image-slider [slides]="this.carousel">
+        </app-image-slider>
+        <div class="single-product__title-group">
+            <h1 class="single-product__title">{{returnNaslov()}}</h1>
+            <p class="single-product__dezen">{{product.dezen}}</p>
+            <p class="single-product__price">{{product.price}} RSD</p>
+            <button class="single-product__btn">Poruči {{product.category}}</button>
+        </div>
+
+    </section>
+    <section class="single-product__desc">
+        <p class="single-product__descTitle">Sadrzaj kompleta:</p><br>
+        <p>{{returnOgradica()}} <span *ngIf="product.komplet.masne">sa {{product.komplet.masne}} mašne</span></p>
+        Posteljina: sastoji se od ravnog jastučeta, čaršava i {{returnPosteljina()}}<br><br>
+        Dodaci: {{product.additional}}
+        <br><br>
+        <hr color="primary"><br>
+        <p>Svi proizvodi iz Mirkine radionice su napravljeni od čistog pamuka i punjeni silikonskim materijalom.</p>
+    </section>
+
+</ng-container>

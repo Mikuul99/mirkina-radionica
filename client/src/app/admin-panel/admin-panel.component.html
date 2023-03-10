@@ -1,0 +1,48 @@
+<h1 class="adminPanel__h1">Admin Panel</h1>
+
+<body class="adminPanel">
+    <div class="adminPanel__side-panel">
+        <button mat-flat-button routerLink="add-product" class="adminPanel__add-btn">Dodaj proizvod</button>
+    </div>
+    
+    <hr color="basic">
+
+    <div class="adminPanel__product-container">
+        <mat-card class="adminPanel__product" *ngFor="let product of this.products">
+            <a class="adminPanel__product-link" routerLink="product/{{product.id}}"><img class="adminPanel__product-image" mat-card-image src="{{product.carousel[0].imageUrl}}"></a>
+            <mat-card-header class="adminPanel__product-header">
+                <mat-card-title class="adminPanel__product-title">{{product.category}}</mat-card-title>
+                <mat-card-subtitle class="adminPanel__product-subtitle--1">{{product.dezen}}</mat-card-subtitle>
+                <mat-card-subtitle class="adminPanel__product-subtitle--2">{{product.price}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions class="adminPanel__product-actions">
+                <button class="adminPanel__delete-btn" mat-raised-button color="warn" (click)="deleteProduct(product.id)">Obriši</button>
+                <button class="adminPanel__update-btn" mat-raised-button color="accent">Izmeni</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</body>
+
+
+
+<!-- <table mat-table [dataSource]="products" class="m-auto width-50">
+    <mat-text-column name="name"></mat-text-column>
+    <mat-text-column name="description"></mat-text-column>
+    <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Cena[RSD]</th>
+        <td mat-cell *matCellDef="let data">{{data.price}}</td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Operacija</th>
+        <td mat-cell *matCellDef="let data">
+            <button mat-raised-button color="accent">Izmeni</button>
+            <button mat-raised-button color="warn" (click)="deleteProduct(data.id)">Obriši</button>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>
+
+<button class="add-product-btn" mat-raised-button (click)="showForm()">Dodaj proizvod</button>
+
+<app-add-product *ngIf="showAddProduct"></app-add-product> -->

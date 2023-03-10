@@ -1,0 +1,52 @@
+<mat-toolbar class="navbar" color="primary">
+    <a routerLink="/" href="" class="navbar__logo">Mirkina<br><span class="navbar__logo--radionica">radionica</span></a>
+    <div class="navbar__btn-container">
+        <button mat-fab routerLink="store" mat-button color="basic" class="navbar__btn--store"><mat-icon
+                class="navbar__btn-icon navbar__btn-icon--store" aria-hidden="false" aria-label="Example home icon"
+                fontIcon="store"></mat-icon></button>
+        <small class="navbar__btn-small">Prodavnica</small>
+    </div>
+    <button mat-icon-button class="navbar__hamburger" (click)="hamburgerMenu()"><mat-icon
+            class="navbar__btn-icon navbar__btn-icon--store" aria-hidden="false" aria-label="Example home icon"
+            fontIcon="menu"></mat-icon></button>
+    <div [class.navbar__menu-active]="hamburgerBtn" class="navbar__menu">
+        <div class="navbar__btn-container navbar__btn-container--menu">
+            <button mat-icon-button routerLink="/" mat-button color="basic" class="navbar__btn"><mat-icon
+                    class="navbar__btn-icon">home</mat-icon></button>
+            <small class="navbar__btn-small">Home</small>
+        </div>
+        <div class="navbar__btn-container navbar__btn-container--menu">
+            <button mat-icon-button routerLink="contact" mat-button color="basic" class="navbar__btn"><mat-icon
+                    class="navbar__btn-icon">phone</mat-icon></button>
+            <small class="navbar__btn-small">Kontakt</small>
+        </div>
+        <div class="navbar__btn-container navbar__btn-container--menu">
+            <button mat-icon-button routerLink="info" mat-button color="basic" class="navbar__btn"><mat-icon
+                    class="navbar__btn-icon">info</mat-icon></button>
+            <small class="navbar__btn-small">Info</small>
+        </div>
+        <div class="navbar__btn-container navbar__btn-container--menu">
+            <button mat-icon-button routerLink="support" mat-button color="basic" class="navbar__btn"><mat-icon
+                    class="navbar__btn-icon">help</mat-icon></button>
+            <small class="navbar__btn-small">Pomoć</small>
+        </div>
+    </div>
+    <!-- <div class="demo-section flex justify-center align-center gap-2">
+        <button mat-icon-button>
+            <mat-icon [matMenuTriggerFor]="menu" matBadge="15" matBadgeColor="accent">notifications</mat-icon>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item>Instagram: Nov Follower</button>
+                <button mat-menu-item>Nova porudzbina</button>
+                </mat-menu>
+            <span class="cdk-visually-hidden"></span>
+        </button>
+        <button *ngIf="!isLoggedIn()" routerLink="login" mat-stroked-button color="basic">Login</button>
+        <button *ngIf="isLoggedIn()" (click)="logout()" routerLink="/" mat-stroked-button color="basic">Logout</button>
+    </div> -->
+</mat-toolbar>
+
+<router-outlet (activate)="onOutletLoaded($event)"></router-outlet>
+
+<mat-toolbar class="footer" color="basic">
+    <p>Mirkina radionica &#174;</p>
+</mat-toolbar>

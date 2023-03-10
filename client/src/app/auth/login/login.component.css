@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-card {
+    margin-top: 15rem;
+    padding: 5rem 3rem;
+    padding-bottom: 2rem;
+    border-radius: 0;
+}
+
+.mat-spinner {
+    background-color: var(--darkviolet);
+    color: white;
+}
+
+.mat-spinner ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+}

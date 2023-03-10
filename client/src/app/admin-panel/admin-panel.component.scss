@@ -1,0 +1,45 @@
+html {
+    min-height: 100vh;
+}
+
+.adminPanel {
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+
+    &__h1 {
+        text-align: center;
+    }
+
+    &__side-panel {
+        width: 100%;
+        flex: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    &__product-container {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        gap: 2rem;
+        justify-content: center;
+        align-items: flex-start;
+        flex: 85%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    &__product {
+        width: 30%;
+        padding-bottom: 2rem;
+    }
+
+    &__product-actions {
+        padding: 0 1rem;
+    }
+}
