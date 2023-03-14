@@ -32,6 +32,5 @@ export class ProductsComponent implements OnInit {
       })
       console.log(this.products)
     });
-    // this.insta.getPosts();
   }
 }
