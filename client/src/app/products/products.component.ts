@@ -21,6 +21,8 @@ export class ProductsComponent implements OnInit {
 
   products: Product[] = [];
 
+  labelPosition: 'up' | 'down' | 'new' = 'new';
+
   ngOnInit(): void {
     this.service.getProducts().subscribe((data: DbData) => {
       data.body.forEach(product => {

@@ -1,17 +1,105 @@
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@mixin phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$phone}) and (max-width: #{$desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
 .shop {
 
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 2rem 0;
+
+    @include phone() {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
 
     &__side-panel {
         width: 100%;
-        flex: 15%;
+        flex: 25%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+        gap: 2rem;
         height: 100%;
+        padding-inline: 1rem;
+
+        @include phone() {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+
+    &__filter-h2 {
+        color: var(--primary);
+
+        @include phone() {
+            font-size: 1rem;
+        }
+    }
+
+    &__filter-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__filter-checkbox {
+        border: .2rem solid var(--primary);
+        padding: .5rem;
+        border-radius: 1rem;
+
+        @include phone() {
+            font-size: .8rem;
+        }
+    }
+
+    &__sort-h2 {
+        color: var(--primary);
+
+        @include phone() {
+            font-size: 1rem;
+        }
+    }
+
+    &__sort-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @include phone() {
+            
+        }
+    }
+
+    &__sort-radio {
+        border: .2rem solid var(--primary);
+        padding: .5rem;
+        border-radius: 1rem;
+
+        @include phone() {
+            font-size: .8rem;
+        }
     }
 
     &__product-container {
@@ -22,17 +110,45 @@
         gap: 2rem;
         justify-content: center;
         align-items: flex-start;
-        flex: 85%;
+        flex: 75%;
         flex-wrap: wrap;
         height: 100%;
+
+        @include tablet() {
+            gap: 1rem;
+            padding: 0 1rem;
+        }
     }
 
     &__product {
         width: 30%;
         padding-bottom: 2rem;
+
+        @include tablet() {
+            width: 40%;
+        }
+
+        @include phone() {
+            width: 100%;
+        }
     }
 
-    &__product-actions {
-        padding: 0 1rem;
+    &__product-title {
+        text-transform: capitalize;
+    }
+
+    &__product-subtitle {
+
+        font-size: 1rem;
+        &--1 {
+
+            @include tablet() {
+                font-size: .8rem;
+            }
+        }
+        
+        &--2 {
+            font-weight: 600;
+        }
     }
 }

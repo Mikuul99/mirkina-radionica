@@ -65,6 +65,10 @@ $desktop: 1200px;
       font-size: 2rem;
     }
 
+    @include phone() {
+      font-size: 1.8rem;
+    }
+
     &--sub {
       color: white;
       font-size: .7em;
@@ -99,6 +103,10 @@ $desktop: 1200px;
       animation: alternate infinite 5s ruler;
       border-radius: 1rem;
     }
+
+    @include phone() {
+      width: 80%;
+    }
   }
 
   // SHOP SECTION
@@ -120,6 +128,10 @@ $desktop: 1200px;
       font-size: 2rem;
       width: 30%;
     }
+
+    @include phone() {
+      width: 80%;
+    }
   }
 
   &__shop-cards {
@@ -134,6 +146,11 @@ $desktop: 1200px;
 
     @include tablet() {
       gap: 5rem;
+    }
+
+    @include phone() {
+      flex-direction: column;
+      width: 80%;
     }
   }
 
@@ -173,6 +190,8 @@ $desktop: 1200px;
     }
   }
 
+  // FORM SECTION
+
 
   &__form-section {
     background-color: #fff9f9;
@@ -192,6 +211,10 @@ $desktop: 1200px;
     @include tablet {
       font-size: 2rem;
       width: 30%;
+    }
+
+    @include phone() {
+      width: 80%;
     }
   }
 
@@ -215,6 +238,10 @@ $desktop: 1200px;
       padding: 3rem 0;
       gap: 3.5rem;
     }
+
+    @include phone() {
+      width: 80%;
+    }
   }
 
   &__form-field {
@@ -226,6 +253,10 @@ $desktop: 1200px;
 
     @include tablet() {
       width: 60%;
+    }
+
+    @include phone() {
+      width: 80%;
     }
   }
 
@@ -268,6 +299,10 @@ $desktop: 1200px;
       padding: 1rem 0;
       border-radius: 2rem;
       width: 30%;
+    }
+
+    @include phone() {
+      width: 40%;
     }
 
     &:hover {

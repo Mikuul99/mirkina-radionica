@@ -1,7 +1,17 @@
-<app-product></app-product>
-
 <body class="shop">
     <div class="shop__side-panel">
+      <div class="shop__filter-container">
+        <h2 class="shop__filter-h2">Filter</h2>
+        <mat-checkbox class="shop__filter-checkbox shop__filter-checkbox--kompleti">Gnezda</mat-checkbox>
+        <mat-checkbox class="shop__filter-checkbox shop__filter-checkbox--gnezda">Kompleti</mat-checkbox>
+      </div>
+
+      <mat-radio-group class="shop__sort-container" [(ngModel)]="labelPosition">
+        <h2 class="shop__sort-h2">Sortiranje</h2>
+        <mat-radio-button class="shop__sort-radio shop__sort-radio--new" value="new">Najnovije</mat-radio-button>
+        <mat-radio-button class="shop__sort-radio shop__sort-radio--up" value="up">Rastuće</mat-radio-button>
+        <mat-radio-button class="shop__sort-radio shop__sort-radio--down" value="down">Opadajuće</mat-radio-button>
+      </mat-radio-group>
     </div>
     
     <hr color="basic">
@@ -11,23 +21,9 @@
             <a class="shop__product-link" routerLink="product/{{product.id}}"><img class="shop__product-image" mat-card-image src="{{product.carousel[0].imageUrl}}"></a>
             <mat-card-header class="shop__product-header">
                 <mat-card-title class="shop__product-title">{{product.category}}</mat-card-title>
-                <mat-card-subtitle class="shop__product-subtitle--1">{{product.dezen}}</mat-card-subtitle>
-                <mat-card-subtitle class="shop__product-subtitle--2">{{product.price}}</mat-card-subtitle>
+                <mat-card-subtitle class="shop__product-subtitle shop__product-subtitle--1">{{product.dezen}}</mat-card-subtitle>
+                <mat-card-subtitle class="shop__product-subtitle shop__product-subtitle--2">{{product.price}} RSD</mat-card-subtitle>
             </mat-card-header>
         </mat-card>
     </div>
 </body>
-
-<!-- <mat-grid-list cols="3" gutterSize="10">
-  <mat-grid-tile *ngFor="let product of this.products">
-    <a routerLink='product/{{product.id}}' href="">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title>Proizvod</mat-card-title>
-          <mat-card-subtitle></mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{product.carousel[0]}}">
-      </mat-card>
-    </a>
-  </mat-grid-tile>
-</mat-grid-list> -->

@@ -8,7 +8,6 @@ import { LandingComponent } from './landing/landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { LoginComponent } from './auth/login/login.component';
-import { ProductComponent } from './products/product/product.component';
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { DeleteDialogComponent } from './admin-panel/delete-dialog/delete-dialog.component';
@@ -31,7 +30,6 @@ import { AuthService } from './service/auth.service';
     ProductsComponent,
     LandingComponent,
     LoginComponent,
-    ProductComponent,
     SingleProductComponent,
     AdminPanelComponent,
     DeleteDialogComponent,
