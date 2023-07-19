@@ -5,6 +5,7 @@ import { DbData } from '../models/dbData';
 import { Product } from '../models/Product';
 import { ProductService } from '../service/product.service';
 import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -21,7 +22,8 @@ export class AdminPanelComponent implements OnInit {
     public service: ProductService,
     public dialog: MatDialog,
     public router: Router,
-    public route: ActivatedRoute) { }
+    public route: ActivatedRoute,
+    private authService: AuthService) { }
   
   ngOnInit(): void {
     this.service.getProducts().subscribe((data: DbData)=> {
@@ -30,6 +32,10 @@ export class AdminPanelComponent implements OnInit {
       )
       console.log(this.products)
     });
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
   showForm() {

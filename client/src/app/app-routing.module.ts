@@ -16,9 +16,9 @@ const routes: Routes = [
   {path: "store", component: ProductsComponent},
   {path: "", component: LandingComponent},
   {path: "store/product/:id", component: SingleProductComponent},
-  {path: "admin/panel", canActivate:[AuthGuard], component: AdminPanelComponent},
-  {path: "admin/panel/product/:id", canActivate: [AuthGuard], component: SingleProductComponent},
-  {path: "admin/panel/add-product", canActivate:[AuthGuard], component: AddProductComponent},
+  {path: "admin", canActivate:[AuthGuard], component: AdminPanelComponent},
+  {path: "admin/product/:id", canActivate: [AuthGuard], component: SingleProductComponent},
+  {path: "admin/add-product", canActivate:[AuthGuard], component: AddProductComponent},
   {path: "contact", component: ContactComponent},
   {path: "support", component: SupportComponent},
   {path: "info", component: InfoComponent}
