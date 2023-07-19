@@ -23,6 +23,7 @@ $desktop: 1024px;
 .shop {
 
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     min-height: 100vh;
     padding: 2rem 0;
@@ -35,7 +36,7 @@ $desktop: 1024px;
 
     &__side-panel {
         width: 100%;
-        flex: 25%;
+        flex: 15%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -50,6 +51,12 @@ $desktop: 1024px;
         }
     }
 
+    &__h2-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__filter-h2 {
         color: var(--primary);
 
@@ -60,11 +67,16 @@ $desktop: 1024px;
 
     &__filter-container {
         display: flex;
+        width: 100%;
         flex-direction: column;
         gap: 1rem;
+        background-color: var(--primary-200);
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
     }
 
-    &__filter-checkbox {
+    &__filter {
         border: .2rem solid var(--primary);
         padding: .5rem;
         border-radius: 1rem;
@@ -74,7 +86,24 @@ $desktop: 1024px;
         }
     }
 
-    &__sort-h2 {
+    &__disable-filter {
+        padding: .5rem;
+        border-radius: 1rem;
+        background-color: var(--primary);
+        outline: 0;
+        border: 0;
+        width: 100%;
+        padding: .5rem 0;
+        color: white;
+        cursor: pointer;
+
+
+        @include phone() {
+            font-size: .8rem;
+        }
+    }
+
+    &__sorter-h2 {
         color: var(--primary);
 
         @include phone() {
@@ -82,17 +111,22 @@ $desktop: 1024px;
         }
     }
 
-    &__sort-container {
+    &__sorter-container {
         display: flex;
+        width: 100%;
         flex-direction: column;
         gap: 1rem;
+        background-color: var(--primary-200);
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
 
         @include phone() {
             
         }
     }
 
-    &__sort-radio {
+    &__sorter {
         border: .2rem solid var(--primary);
         padding: .5rem;
         border-radius: 1rem;
@@ -110,7 +144,7 @@ $desktop: 1024px;
         gap: 2rem;
         justify-content: center;
         align-items: flex-start;
-        flex: 75%;
+        flex: 85%;
         flex-wrap: wrap;
         height: 100%;
 
@@ -122,7 +156,13 @@ $desktop: 1024px;
 
     &__product {
         width: 30%;
-        padding-bottom: 2rem;
+        padding-bottom: 0;
+        transition: transform .1s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
 
         @include tablet() {
             width: 40%;
@@ -131,6 +171,12 @@ $desktop: 1024px;
         @include phone() {
             width: 100%;
         }
+    }
+
+    &__product-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__product-title {
@@ -150,5 +196,16 @@ $desktop: 1024px;
         &--2 {
             font-weight: 600;
         }
+    }
+
+    &__product-more {
+        width: 30%;
+        padding: .5rem 0;
+        background-color: var(--primary);
+        outline: 0;
+        border: 0;
+        border-radius: .2rem;
+        color: white;
+        cursor: pointer;
     }
 }

@@ -1,29 +1,59 @@
 <body class="shop">
-    <div class="shop__side-panel">
-      <div class="shop__filter-container">
+  <div class="shop__side-panel">
+
+    <!-- Filter buttons -->
+    <div class="shop__filter-container">
+
+      <div class="shop__h2-group">
         <h2 class="shop__filter-h2">Filter</h2>
-        <mat-checkbox class="shop__filter-checkbox shop__filter-checkbox--kompleti">Gnezda</mat-checkbox>
-        <mat-checkbox class="shop__filter-checkbox shop__filter-checkbox--gnezda">Kompleti</mat-checkbox>
+        <button class="shop__deleteModifier shop__deleteModifier--filter" mat-mini-fab color="primary"
+        [disabled]="!selectedFilterButton"
+        (click)="deselectFilter()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      
+      <button mat-flat-button [color]="selectedFilterButton === filterValue ? 'primary' : 'basic'"
+        *ngFor="let filterValue of this.filterValues" (click)="this.onChange(filterValue, 'filter')">
+        {{filterValue.charAt(0).toUpperCase() + filterValue.slice(1)}}
+      </button>
+    </div>
+
+    <!-- Sorter buttons -->
+    <div class="shop__sorter-container">
+
+      <div class="shop__h2-group">
+        <h2 class="shop__sorter-h2">Sortiranje</h2>
+        <button class="shop__deleteModifier shop__deleteModifier--sorter" mat-mini-fab color="primary"
+        [disabled]="!selectedSorterButton"
+        (click)="deselectSorter()">
+          <mat-icon>close</mat-icon>
+        </button>
       </div>
 
-      <mat-radio-group class="shop__sort-container" [(ngModel)]="labelPosition">
-        <h2 class="shop__sort-h2">Sortiranje</h2>
-        <mat-radio-button class="shop__sort-radio shop__sort-radio--new" value="new">Najnovije</mat-radio-button>
-        <mat-radio-button class="shop__sort-radio shop__sort-radio--up" value="up">Rastuće</mat-radio-button>
-        <mat-radio-button class="shop__sort-radio shop__sort-radio--down" value="down">Opadajuće</mat-radio-button>
-      </mat-radio-group>
+      <button mat-flat-button [color]="selectedSorterButton === sorterValue ? 'primary' : 'basic'"
+        *ngFor="let sorterValue of this.sorterValues" (click)="this.onChange(sorterValue, 'sorter')">
+        {{sorterValue.charAt(0).toUpperCase() + sorterValue.slice(1)}}
+      </button>
     </div>
-    
-    <hr color="basic">
 
-    <div class="shop__product-container">
-        <mat-card class="shop__product" *ngFor="let product of this.products">
-            <a class="shop__product-link" routerLink="product/{{product.id}}"><img class="shop__product-image" mat-card-image src="{{product.carousel[0].imageUrl}}"></a>
-            <mat-card-header class="shop__product-header">
-                <mat-card-title class="shop__product-title">{{product.category}}</mat-card-title>
-                <mat-card-subtitle class="shop__product-subtitle shop__product-subtitle--1">{{product.dezen}}</mat-card-subtitle>
-                <mat-card-subtitle class="shop__product-subtitle shop__product-subtitle--2">{{product.price}} RSD</mat-card-subtitle>
-            </mat-card-header>
-        </mat-card>
-    </div>
+
+  </div>
+
+  <hr color="basic">
+
+  <div class="shop__product-container">
+    <mat-card class="shop__product" *ngFor="let product of this.shownProducts">
+      <a class="shop__product-link" routerLink="product/{{product.id}}"><img class="shop__product-image" mat-card-image
+          src="{{product.carousel[0].imageUrl}}"></a>
+      <mat-card-header class="shop__product-header">
+        <mat-card-title class="shop__product-title">{{product.category}}</mat-card-title>
+        <mat-card-subtitle
+          class="shop__product-subtitle shop__product-subtitle--1">{{product.dezen}}</mat-card-subtitle>
+        <mat-card-subtitle class="shop__product-subtitle shop__product-subtitle--2">{{product.price}}
+          RSD</mat-card-subtitle>
+          <button routerLink="product/{{product.id}}" class="shop__product-more">Klik za info...</button>
+        </mat-card-header>
+    </mat-card>
+  </div>
 </body>

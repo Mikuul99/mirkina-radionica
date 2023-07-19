@@ -1,14 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ProductService } from '../service/product.service';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
-import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-landing',
@@ -22,7 +13,7 @@ export class LandingComponent implements OnInit {
   imagesLoaded: number = 0;
   loading: boolean = true;
 
-  @ViewChild('aboutUs') aboutUs;
+  @ViewChild('landing') landing;
 
   constructor() { }
 
@@ -30,7 +21,7 @@ export class LandingComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    console.log(this.aboutUs);
+    console.log('component:', this.landing);
   }
 }
 

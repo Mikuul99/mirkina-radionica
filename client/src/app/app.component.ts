@@ -33,12 +33,10 @@ export class AppComponent {
 
   onOutletLoaded(component) {
     if (component instanceof LandingComponent) {
-      this.section = component.aboutUs;
+      this.section = component.landing;
       console.log(this.section);
 
     }
-
-
   }
 
   hamburgerMenu() {
