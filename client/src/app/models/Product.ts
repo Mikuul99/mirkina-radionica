@@ -8,6 +8,7 @@ export class Product {
         }[],
         public additional: string[],
         public dezen: string,
+        public gnezdo: string,
         public komplet: {
             ogradica: string,
             masne: string,

@@ -1,0 +1,69 @@
+<mat-dialog-content>
+  <h1 class="update-product__title">Ažuriran proizvod</h1>
+  <div class="update-product__container">
+    <form class="update-product__form" [formGroup]="updateForm" novalidate>
+
+      <mat-form-field color="accent" appearance="fill" class="update-product__form-field">
+        <mat-select class="update-product__input" formControlName="category" placeholder="Category">
+          <mat-option *ngFor="let category of categoryList" [value]="category.value">{{category.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Add komplet fields here if needed -->
+
+      <div *ngIf="updateForm.controls.category.value =='komplet'" class="update-product__komplet"
+        formGroupName="komplet">
+        <mat-form-field color="accent" class="update-product__form-field">
+          <input matInput class="update-product__input" type="text" formControlName="ogradica"
+            placeholder="Vrsta ogradice">
+        </mat-form-field>
+        <mat-form-field color="accent" class="update-product__form-field">
+          <input matInput class="update-product__input" type="text" formControlName="masne" placeholder="Broj mašni">
+        </mat-form-field>
+        <mat-form-field color="accent" class="update-product__form-field">
+          <input matInput class="update-product__input" type="text" formControlName="posteljina"
+            placeholder="Posteljina">
+        </mat-form-field>
+      </div>
+
+      <mat-form-field color="accent" class="update-product__form-field">
+        <input matInput type="text" formControlName="gnezdo" placeholder="Vrsta gnezda">
+      </mat-form-field>
+
+      <div class="update-product__form-field--additional" formArrayName="additional">
+        <div class="update-product__checkbox" *ngFor="let check of additionalList; let i = index">
+          <mat-checkbox color="warn" class="update-product__input" [formControlName]="i"
+            (change)="onCheckChange(i)">{{ check }}</mat-checkbox>
+        </div>
+      </div>
+
+      <ng-container formArrayName="carousel">
+        <ng-container *ngFor="let image of carousel.controls; let i = index">
+          <div [formGroup]="toFormGroup(image)">
+            <mat-form-field color="accent" class="update-product__form-field">
+              <input matInput type="text" formControlName="imageUrl" placeholder="slika{{i+1}}" required>
+            </mat-form-field>
+            <button mat-icon-button (click)="removeImage(i)"><mat-icon>remove</mat-icon></button>
+          </div>
+        </ng-container>
+      </ng-container>
+      <button mat-mini-fab (click)="addImage()">
+        <mat-icon class="add-course-btn">add</mat-icon>
+      </button>
+
+      <mat-form-field color="accent" class="update-product__form-field">
+        <input matInput class="update-product__input" type="text" formControlName="dezen" placeholder="Dezen" required>
+      </mat-form-field>
+
+      <mat-form-field color="accent" class="update-product__form-field">
+        <input matInput class="update-product__input" type="number" formControlName="price" placeholder="Cena" required>
+      </mat-form-field>
+
+    </form>
+    <mat-dialog-actions>
+      <button mat-flat-button color="accent" (click)="onCancel()">Cancel</button>
+      <button mat-button (click)="onUpdate()" [disabled]="updateForm.invalid">Ažuriraj</button>
+    </mat-dialog-actions>
+  </div>
+
+</mat-dialog-content>

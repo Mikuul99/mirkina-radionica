@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductComponent } from './admin-panel/add-product/add-product.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ContactComponent } from './contact/contact.component';
@@ -18,7 +17,6 @@ const routes: Routes = [
   {path: "store/product/:id", component: SingleProductComponent},
   {path: "admin", canActivate:[AuthGuard], component: AdminPanelComponent},
   {path: "admin/product/:id", canActivate: [AuthGuard], component: SingleProductComponent},
-  {path: "admin/add-product", canActivate:[AuthGuard], component: AddProductComponent},
   {path: "contact", component: ContactComponent},
   {path: "support", component: SupportComponent},
   {path: "info", component: InfoComponent}

@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImageSliderComponent implements OnInit {
 
   @Input() slides: any[] = [];
-
   currentIndex: number = 0;
 
   constructor() { }

@@ -1,6 +1,4 @@
 <body class="login">
-
-
     <form [formGroup]="form" class="login__form" (ngSubmit)="onSubmit()">
         <div class="login__form-header">
             <h2 class="login__form-h2">Administrator login</h2>
@@ -17,33 +15,4 @@
         <p *ngIf="this.loginErrorMessage" class="login__status">{{this.loginErrorMessage}}</p>
         <button class="login__submit" mat-raised-button color="primary" type="submit" [disabled]="this.form.invalid">Login</button>
     </form>
-
-
-
-    <!-- <form [formGroup]="form" class="login__form">
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput name="email" formControlName="email" type="email" placeholder="Unesite svoj email">
-        </mat-form-field>
-        <p *ngIf="f.email.errors && f.email.touched && f.email.dirty" class="text-red">Email nije validan</p>
-
-        <mat-form-field>
-            <mat-label>Password</mat-label>
-            <input matInput name="password" formControlName="password" type="password"
-                placeholder="Unesite svoj password">
-        </mat-form-field>
-        <p *ngIf="f.password.errors && f.password.touched && f.password.dirty" class="text-red">Password mora
-            sadržati minimum 6 karaktera</p>
-
-        <button class="mat-spinner" (click)="onLogin()" type="submit" mat-raised-button color="accent"
-            [disabled]="!form.valid">
-            <mat-spinner class=".mat-spinner" *ngIf="isLoading" diameter="35" color="basic"></mat-spinner>
-            <span *ngIf="!isLoading">Login</span>
-        </button>
-        <p *ngIf="loginResponse">{{loginResponse}}</p>
-    </form> -->
-    <!-- 
-    <button mat-raised-button color="accent" (click)="isLoggedIn()">Check Exp</button>
-    <button mat-raised-button color="primary" (click)="onLogout()">Logout</button> -->
-
 </body>

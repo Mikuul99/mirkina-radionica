@@ -1,0 +1,72 @@
+<mat-dialog-content>
+    <h1 class="add-product__title">Nov proizvod</h1>
+    <div class="add-product__container">
+      <form class="add-product__form" [formGroup]="addForm">
+  
+        <mat-form-field color="accent" appearance="fill" class="add-product__form-field">
+          <mat-select class="add-product__input" formControlName="category" placeholder="Kategorija" required>
+            <mat-option *ngFor="let category of categoryList" [value]="category.value">{{category.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <!-- Add komplet fields here if needed -->
+  
+        <div *ngIf="addForm.controls.category.value =='komplet'" class="add-product__komplet"
+          formGroupName="komplet">
+          <mat-form-field color="accent" class="add-product__form-field">
+            <input matInput class="add-product__input" type="text" formControlName="ogradica"
+              placeholder="Vrsta ogradice" required>
+          </mat-form-field>
+          <mat-form-field color="accent" class="add-product__form-field">
+            <input matInput class="add-product__input" type="text" formControlName="masne" placeholder="Broj mašni" required>
+          </mat-form-field>
+          <mat-form-field color="accent" class="add-product__form-field">
+            <input matInput class="add-product__input" type="text" formControlName="posteljina"
+              placeholder="Posteljina" required>
+          </mat-form-field>
+        </div>
+  
+        <div *ngIf="addForm.controls.category.value === 'gnezdo'">
+          <mat-form-field color="accent" class="add-product__form-field">
+            <input matInput type="text" formControlName="gnezdo" placeholder="Vrsta gnezda" required>
+          </mat-form-field>
+        </div>
+  
+        <div class="add-product__form-field--additional" formArrayName="additional">
+          <div class="add-product__checkbox" *ngFor="let check of additionalList; let i = index">
+            <mat-checkbox color="warn" class="add-product__input"
+              (change)="onCheckChange($event, check)" required>{{ check.toUpperCase()[0] + check.slice(1) }}</mat-checkbox>
+          </div>
+        </div>
+  
+        <ng-container formArrayName="carousel">
+          <ng-container *ngFor="let image of carousel.controls; let i = index">
+            <div [formGroup]="toFormGroup(image)">
+              <mat-form-field color="accent" class="add-product__form-field">
+                <input matInput type="text" formControlName="imageUrl" placeholder="slika{{i+1}}" required>
+              </mat-form-field>
+              <button mat-icon-button (click)="removeImage(i)"><mat-icon>remove</mat-icon></button>
+            </div>
+          </ng-container>
+        </ng-container>
+        <button mat-mini-fab (click)="addImage()">
+          <mat-icon class="add-course-btn">add</mat-icon>
+        </button>
+  
+        <mat-form-field color="accent" class="add-product__form-field">
+          <input matInput class="add-product__input" type="text" formControlName="dezen" placeholder="Dezen" required>
+        </mat-form-field>
+  
+        <mat-form-field color="accent" class="add-product__form-field">
+          <input matInput class="add-product__input" type="number" formControlName="price" placeholder="Cena" required>
+        </mat-form-field>
+  
+      </form>
+      <mat-dialog-actions>
+        <button mat-flat-button color="accent" (click)="onCancel()">Cancel</button>
+        <button mat-button (click)="onAdd()" [disabled]="addForm.invalid">Potvrdi</button>
+      </mat-dialog-actions>
+    </div>
+  
+  </mat-dialog-content>
+  

@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, throwError, map } from 'rxjs';
 import { DbData } from '../models/dbData';
 import { Product } from '../models/Product';
 
@@ -41,15 +41,25 @@ export class ProductService {
   deleteProduct(id: any) {
     this.http.delete(`${this.url}/product/${id}`).subscribe(() => {
       location.reload();
-      
+
     });
   }
 
-  updateProduct(product) {
-    return this.http.put(`${this.url}/product/${product.id}`, JSON.stringify(product), this.httpOptions).pipe(
-      catchError(this.errorHandler)
-    )
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.put<DbData>(`${this.url}/product/${product.id}`, JSON.stringify(product), this.httpOptions)
+      .pipe((map((data: DbData) => new Product(
+        data.body.id,
+        data.body.price,
+        data.body.carousel,
+        data.body.additional,
+        data.body.dezen,
+        data.body.gnezdo,
+        data.body.komplet,
+        data.body.category
+      ))));
   }
+
+
 
   errorHandler(error) {
     let errorMessage = '';

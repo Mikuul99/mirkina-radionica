@@ -87,6 +87,7 @@ export class ProductsComponent implements OnInit {
     this.selectedFilterButton = '';
     this.filtered = false;
     this.shownProducts = this.products;
+    this.deselectSorter()
   }
 
   deselectSorter() {

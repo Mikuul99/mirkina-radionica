@@ -12,7 +12,6 @@ import { SingleProductComponent } from './products/single-product/single-product
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { DeleteDialogComponent } from './admin-panel/delete-dialog/delete-dialog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AddProductComponent } from './admin-panel/add-product/add-product.component';
 import { AuthInterceptorService } from './service/auth-interceptor.service';
 import { ProductService } from './service/product.service';
 import { ImageSliderModule } from './image-slider/image-slider.module';
@@ -20,6 +19,8 @@ import { ContactComponent } from './contact/contact.component';
 import { InfoComponent } from './info/info.component';
 import { SupportComponent } from './support/support.component';
 import { AuthService } from './service/auth.service';
+import { UpdateDialogComponent } from './admin-panel/update-dialog/update-dialog.component';
+import { AddDialogComponent } from './admin-panel/add-product/add-dialog.component';
 
 
 
@@ -33,10 +34,11 @@ import { AuthService } from './service/auth.service';
     SingleProductComponent,
     AdminPanelComponent,
     DeleteDialogComponent,
-    AddProductComponent,
+    AddDialogComponent,
     ContactComponent,
     InfoComponent,
     SupportComponent,
+    UpdateDialogComponent,
   ],
   imports: [
     BrowserModule,

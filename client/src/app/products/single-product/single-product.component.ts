@@ -15,45 +15,7 @@ export class SingleProductComponent implements OnInit {
   product!: Product;
   carousel: string[] = [];
 
-  carouselMap() {
-    this.product
-  }
-
-  returnNaslov(): string {
-    if (this.product.category === 'komplet') {
-      return 'Komplet za bebi krevetac';
-    } else if (this.product.category === 'gnezdo') {
-      return 'Bebi gnezdo';
-    }
-    return '';
-  }
-
-  returnOgradica(): string {
-    if (this.product.komplet.ogradica === 'silikon') {
-      return 'Ogradica';
-    } else if (this.product.komplet.ogradica === 'sunđer') {
-      return 'Ravna ogradica'
-    } else if (this.product.komplet.ogradica === 'silikon/karneri') {
-      return 'Ogradica sa karnerima'
-    } else if (this.product.komplet.ogradica === 'sunđer/karneri') {
-      return 'Ravna ogradica sa karnerima'
-    } else if (this.product.komplet.ogradica === 'jastuci') {
-      return 'Ogradica od jastučića'
-    }
-    return '';
-  }
-
-  returnPosteljina(): string {
-    if (this.product.komplet.posteljina === 'jorgan' || 'jorgance') {
-      return 'jorgančeta';
-    } else if (this.product.komplet.posteljina === 'navlaka') {
-      return 'navlake za jorganče';
-    } else if (this.product.komplet.posteljina === 'jorgan/navlaka' || 'jorganc/navlaka') {
-      return 'jorgančeta i navlake za jorganče';
-    }
-    return '';
-  }
-
+  
   constructor(
     private route: ActivatedRoute,
     private service: ProductService) { }
@@ -68,5 +30,40 @@ export class SingleProductComponent implements OnInit {
       console.log(this.product);
     })
   }
-
+  
+  returnNaslov(): string {
+    if (this.product.category === 'komplet') {
+      return 'Komplet za bebi krevetac';
+    } else if (this.product.category === 'gnezdo') {
+      return 'Bebi gnezdo';
+    }
+    return '';
+  }
+  
+  returnOgradica(): string {
+    if (this.product.komplet.ogradica === 'silikon') {
+      return 'Ogradica';
+    } else if (this.product.komplet.ogradica === 'sunđer') {
+      return 'Ravna ogradica'
+    } else if (this.product.komplet.ogradica === 'silikon/karneri') {
+      return 'Ogradica sa karnerima'
+    } else if (this.product.komplet.ogradica === 'sunđer/karneri') {
+      return 'Ravna ogradica sa karnerima'
+    } else if (this.product.komplet.ogradica === 'jastuci') {
+      return 'Ogradica od jastučića'
+    }
+    return '';
+  }
+  
+  returnPosteljina(): string {
+    if (this.product.komplet.posteljina === 'jorgan' || 'jorgance') {
+      return 'jorgančeta';
+    } else if (this.product.komplet.posteljina === 'navlaka') {
+      return 'navlake za jorganče';
+    } else if (this.product.komplet.posteljina === 'jorgan/navlaka' || 'jorgance/navlaka') {
+      return 'jorgančeta i navlake za jorganče';
+    }
+    return '';
+  }
+  
 }
