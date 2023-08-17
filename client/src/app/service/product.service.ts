@@ -59,8 +59,6 @@ export class ProductService {
       ))));
   }
 
-
-
   errorHandler(error) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
