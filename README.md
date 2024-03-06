@@ -11,3 +11,8 @@ The app was envisioned as a web store that showcases products that had been made
 ## Overview
 
 **_Home-page_**
+
+The home page acts as a warm welcome and a short description of the business. It contains multiple buttons pointing to the shop, along with a form at the bottom which serves as a newsletter sign-up for customers that wish to be kept informed about innovations.
+
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/5c00b500-5e3c-453d-8213-dc36df49306b
+
