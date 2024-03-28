@@ -24,4 +24,9 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/96c72dab-f5e9-412
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1024342b-0746-467a-8b82-24be0652e672
 
+**_Product-page_**
+
+By clicking on a product card in the store, the app displays a detailed product preview. The details are a part of the Product Model and every product has its unique characteristics that are displayed dynamically. These details are in the form of images that can be previewed through an image gallery, and text details displayed below the images.
+
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/6f25896c-3429-489c-8497-b468eb318879
 
