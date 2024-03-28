@@ -22,3 +22,6 @@ The shop section represents the store in its full potential. It serves to displa
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/96c72dab-f5e9-412b-808b-374049025e61
 
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1024342b-0746-467a-8b82-24be0652e672
+
+
