@@ -30,8 +30,4 @@ By clicking on a product card in the store, the app displays a detailed product 
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/6f25896c-3429-489c-8497-b468eb318879
 
-
-
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/8991f9d9-e95c-4275-8b18-6c6797871fe2
-
-
+![Github portfolio](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/d7913d7f-eb6e-43cf-97a9-52ad56e3b012)
