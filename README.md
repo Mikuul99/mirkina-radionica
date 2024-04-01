@@ -30,10 +30,21 @@ By clicking on a product card in the store, the app displays a detailed product 
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/6f25896c-3429-489c-8497-b468eb318879
 
+**_Contact-page_**
+
+In the navigation bar, there are 3 pages that serve as further information to the client and the first one is the contact page. The contact page is a static page that contains closer information on the business like clickable Instagram and Facebook page links as well as the email address and location. 
+
 ![Github portfolio](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/d7913d7f-eb6e-43cf-97a9-52ad56e3b012)
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/3de67dd6-156a-46ff-8510-6140182106ae
 
+**_Info-page_**
+
+Another page providing further information is the info page. This is also a static page that allows users to read a brief story about the business' history, current progress and the envisioned future.
+
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1febeaa5-4cbb-4532-a51f-d58d14376d79
+
+![Info-Page-Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/4021f658-0e22-4af4-8e47-f22620f402cb)
 
 
 
