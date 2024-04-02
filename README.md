@@ -20,6 +20,8 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/325f0034-b872-44e
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1d73d110-8f68-4582-99f5-e6a32d035278
 
 
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/3b08b9b7-b9bf-48c8-ab36-85c76c906580
+
 **_Shop_**
 
 The shop section represents the store in its full potential. It serves to display products from the database. The shop consists of the main panel which responsively displays prodcuts, and a side panel which contains a widget for fitlering and sorting the products. The fitler can be set to display prodcuts according to the category, and the sorter can be set to display products in the rising or falling trend in regard to the price, as well as to display the newest products first.
