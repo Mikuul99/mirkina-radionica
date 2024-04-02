@@ -25,15 +25,15 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/61085276-48c7-491
 
 The shop section represents the store in its full potential. It serves to display products from the database. The shop consists of the main panel which responsively displays prodcuts, and a side panel which contains a widget for fitlering and sorting the products. The fitler can be set to display prodcuts according to the category, and the sorter can be set to display products in the rising or falling trend in regard to the price, as well as to display the newest products first.
 
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/96c72dab-f5e9-412b-808b-374049025e61
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/ae0e601e-1ca9-46ec-93e6-8a1f99cb47f2
 
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1024342b-0746-467a-8b82-24be0652e672
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/418a95c4-1287-49ee-8c0c-969f977ad309
 
 **_Product-page_**
 
 By clicking on a product card in the store, the app displays a detailed product preview. The details are a part of the Product Model and every product has its unique characteristics that are displayed dynamically. These details are in the form of images that can be previewed through an image gallery, and text details displayed below the images.
 
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/6f25896c-3429-489c-8497-b468eb318879
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/623baa66-d4f7-4ab6-aab1-efab4a014e33
 
 **_Contact-page_**
 
