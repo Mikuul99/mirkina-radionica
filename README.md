@@ -16,6 +16,10 @@ The home page acts as a warm welcome and a short description of the business. It
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/325f0034-b872-44e1-9a71-17d6874bae35
 
+
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1d73d110-8f68-4582-99f5-e6a32d035278
+
+
 **_Shop_**
 
 The shop section represents the store in its full potential. It serves to display products from the database. The shop consists of the main panel which responsively displays prodcuts, and a side panel which contains a widget for fitlering and sorting the products. The fitler can be set to display prodcuts according to the category, and the sorter can be set to display products in the rising or falling trend in regard to the price, as well as to display the newest products first.
