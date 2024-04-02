@@ -41,7 +41,7 @@ In the navigation bar, there are 3 pages that serve as further information to th
 
 ![Github portfolio](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/d7913d7f-eb6e-43cf-97a9-52ad56e3b012)
 
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/3de67dd6-156a-46ff-8510-6140182106ae
+![Contact-Page_Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/ed229bd1-de16-46c4-b78f-589f22bb8396)
 
 **_Info-page_**
 
