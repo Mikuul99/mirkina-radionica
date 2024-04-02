@@ -19,8 +19,7 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/325f0034-b872-44e
 
 https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1d73d110-8f68-4582-99f5-e6a32d035278
 
-
-https://github.com/Mikuul99/mirkina-radionica/assets/101178689/3b08b9b7-b9bf-48c8-ab36-85c76c906580
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/61085276-48c7-4915-bf60-aad9f8727e29
 
 **_Shop_**
 
