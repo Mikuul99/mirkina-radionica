@@ -46,5 +46,11 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/1febeaa5-4cbb-453
 
 ![Info-Page-Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/4021f658-0e22-4af4-8e47-f22620f402cb)
 
+**_Help-page_**
+
+The help page serves as an informational page about the delivery of the products. The cards in this page provide further insight into the cost of the delivery, the delivery time and a redirect clients to contact us if they need any further assistance. The cards also contain buttons that redirect to the shop and the contact page.
+
+https://github.com/Mikuul99/mirkina-radionica/assets/101178689/9fe30e06-358d-4d9f-acdf-1242160ee98b
+![Help-Page-Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/0a577dba-d364-4175-be8f-04af371cf03a)
 
 
