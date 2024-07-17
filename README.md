@@ -59,6 +59,12 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/9fe30e06-358d-4d9
 
 ![Help-Page-Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/0a577dba-d364-4175-be8f-04af371cf03a)
 
+**Login-page_**
+
+The login page is currently hidden from view and it's only accessible through the manual navigation to the /login route. It's momentary purpose is only to authenticate an administrator who wants to manage the products in the database. Once on the login page, the administrator is prompted to enter their email address and password and depending on the input the dialog will either allow access to the admin-panel or throw an error for better understanding such as an incorrect email or password disclaimer.
+
+https://github.com/user-attachments/assets/76ef5313-7747-44df-82c7-a8dfc9acb00f
+
 **_Admin-panel_**
 
 The admin-panel serves a backoffice for administrators of the page to manage the products by adding, updating or deleting them whenever needed. It displays the same product cards with addition of 2 buttons per card for deleting and updating a desired product. Instead of a filter and sorter, the side panel now contains 2 buttons for adding a new product and logging out of the admin page.
