@@ -59,4 +59,8 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/9fe30e06-358d-4d9
 
 ![Help-Page-Responsive](https://github.com/Mikuul99/mirkina-radionica/assets/101178689/0a577dba-d364-4175-be8f-04af371cf03a)
 
+**_Admin-panel_**
 
+The admin-panel serves a backoffice for administrators of the page to manage the products by adding, updating or deleting them whenever needed. It displays the same product cards with addition of 2 buttons per card for deleting and updating a desired product. Instead of a filter and sorter, the side panel now contains 2 buttons for adding a new product and logging out of the admin page.
+
+![Github portfolio](https://github.com/user-attachments/assets/97dda7d8-124e-46f1-901c-1c7da8abcfab)
