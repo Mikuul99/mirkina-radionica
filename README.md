@@ -63,7 +63,9 @@ https://github.com/Mikuul99/mirkina-radionica/assets/101178689/9fe30e06-358d-4d9
 
 The login page is currently hidden from view and it's only accessible through the manual navigation to the /login route. It's momentary purpose is only to authenticate an administrator who wants to manage the products in the database. Once on the login page, the administrator is prompted to enter their email address and password and depending on the input the dialog will either allow access to the admin-panel or throw an error for better understanding such as an incorrect email or password disclaimer.
 
-https://github.com/user-attachments/assets/d7545f93-284b-4a78-a924-17a47b9b4c34
+https://github.com/user-attachments/assets/9fec13b5-9b1b-4abc-9c88-63a064d21a4b
+
+https://github.com/user-attachments/assets/8768c98d-89d2-46ca-b10b-0bee7ffc6656
 
 **_Admin-panel_**
 
