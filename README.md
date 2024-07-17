@@ -65,7 +65,7 @@ The login page is currently hidden from view and it's only accessible through th
 
 https://github.com/user-attachments/assets/9fec13b5-9b1b-4abc-9c88-63a064d21a4b
 
-https://github.com/user-attachments/assets/8768c98d-89d2-46ca-b10b-0bee7ffc6656
+https://github.com/user-attachments/assets/ff4ee7a2-347c-4168-8a9a-66bd66ae838b
 
 **_Admin-panel_**
 
